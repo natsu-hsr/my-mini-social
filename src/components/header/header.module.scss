@@ -1,0 +1,11 @@
+.header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  background-color: aqua;
+
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  place-items: center;
+}
