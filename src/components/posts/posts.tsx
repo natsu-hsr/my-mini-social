@@ -17,6 +17,7 @@ function Posts() {
   const loadingError = useAppSelector(s => selectThunkError(s, loadPosts.typePrefix));
 
   console.log('posts=', posts);
+  console.log('loadingError=', loadingError);
 
   useEffect(() => {
     if (posts === undefined) {
@@ -35,7 +36,7 @@ function Posts() {
           return (
             <Message
               type='error'
-              message={loadingError?.data}
+              message={loadingError?.data ? loadingError.data : 'Something went wrong'}
             />)
         }
 

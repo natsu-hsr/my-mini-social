@@ -1,13 +1,16 @@
-// @use 
-
 .wrapper {
+  height: inherit;
   max-width: 720px;
   margin: 0 auto;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .container {
-  width: 100%;
   height: 100%;
-  padding-top: 2rem;
+  width: 100%;
+  // padding-top: 2rem;
   text-align: center;
 }

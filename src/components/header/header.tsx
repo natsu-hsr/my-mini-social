@@ -4,8 +4,18 @@ import c from './header.module.scss';
 
 function Header() {
   return (
-    <header className={c.header}>
-      Header
+    <header className={c.wrapper}>
+      <div className={c.header}>
+        Header
+      </div>
+      <div className={c['bottom-content-borders']}>
+        <div className={`${c.corner} ${c['corner-left']}`}>
+          <div className={`${c.border} ${c['border-left']}`} />
+        </div>
+        <div className={`${c.corner} ${c['corner-right']}`}>
+          <div className={`${c.border} ${c['border-right']}`} />
+        </div>
+      </div>
     </header>
   )
 }
