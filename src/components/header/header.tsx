@@ -8,13 +8,11 @@ function Header() {
       <div className={c.header}>
         Header
       </div>
-      <div className={c['bottom-content-borders']}>
-        <div className={`${c.corner} ${c['corner-left']}`}>
-          <div className={`${c.border} ${c['border-left']}`} />
-        </div>
-        <div className={`${c.corner} ${c['corner-right']}`}>
-          <div className={`${c.border} ${c['border-right']}`} />
-        </div>
+      <div className={`${c.corner} ${c['corner-left']}`}>
+        <div className={`${c.border} ${c['border-left']}`} />
+      </div>
+      <div className={`${c.corner} ${c['corner-right']}`}>
+        <div className={`${c.border} ${c['border-right']}`} />
       </div>
     </header>
   )
