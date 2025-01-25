@@ -1,5 +1,6 @@
 import React from 'react'
 import {TPost} from '../../../store/slices/posts'
+import Avatar from '@mui/material/Avatar/Avatar';
 
 import c from './post.module.scss';
 
@@ -11,14 +12,24 @@ function Post({post}: IPostProps) {
   const {
     title,
     desc,
+    img,
     dateCreated,
   } = post;
 
   return (
     <div className={c.wrapper}>
-      <div className={c.title}>{title}</div>
-      <div className={c.desc}>{desc}</div>
-      <div className={c['date-created']}>{dateCreated}</div>
+      <Avatar className={c.avatar}>H</Avatar>
+      <div className={c.content}>
+        <div className={c.header}>
+          <div className={c.title}>
+            {title}
+            <span className={c.dateCreated}>{dateCreated}</span>
+          </div>
+          <div className={c.options}>**burger**</div>
+        </div>
+        <div className={c.desc}>{desc}</div>
+        {img && <div className={c.img}>**img is here**</div>}
+      </div>
     </div>
   )
 }

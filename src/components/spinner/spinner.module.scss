@@ -1,0 +1,6 @@
+@use '/src/shared/styles/colors' as *;
+
+.spinner {
+  padding: 1rem;
+  color: $accent-weak !important;
+}

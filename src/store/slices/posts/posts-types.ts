@@ -5,7 +5,7 @@ export type TPost = {
   id: number;
   title: string;
   desc: string;
-  image?: string; // TODO добавить возможность прикладывать фото и видео
+  img?: string; // TODO добавить возможность прикладывать фото и видео
   status: TPostType,
   type: TPostType,
   dateCreated: string,

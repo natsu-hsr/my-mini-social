@@ -1,9 +1,16 @@
-.wrapper {}
+.head {
+  font-weight: bold;
+  font-size: 52px;
 
-.icon {
   svg {
     font-size: 100px !important;
-  }
-  
-  padding-bottom: 5px;
+    padding-bottom: 3px;
+  }  
+}
+
+.fixed {
+  position: fixed;
+  top: 10%;
+  left: 50%;
+  transform: translateX(-50%);
 }

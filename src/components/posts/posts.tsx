@@ -8,6 +8,7 @@ import {useAppDispatch, useAppSelector} from '../../store/config/hooks';
 import {selectIsThunkPending, selectThunkError} from '../../store/slices/loading-state/loading-state-slice';
 
 import c from './posts.module.scss';
+import Spinner from '../spinner/spinner';
 
 function Posts() {
   const dispatch = useAppDispatch();
@@ -29,22 +30,34 @@ function Posts() {
     <div className={c.wrapper}>
       {(() => {
         if (isLoading) {
-          return <CircularProgress />;
+          return <Spinner />;
         }
 
-        if (!posts?.length || !!loadingError) {
+        if (loadingError) {
           return (
             <Message
               type='error'
               message={loadingError?.data ? loadingError.data : 'Something went wrong'}
-            />)
+              fixed
+            />
+          )
         }
 
-        if (posts.length === 0) {
-          return <Message type='empty' />;
+        if (posts?.length === 0) {
+          return (
+            <Message
+              type='empty'
+              fixed
+            />
+          );
         }
 
-        return posts.map(p => <Post post={p} />)
+        return posts?.map(p => (
+          <Post
+            key={p.id}
+            post={p}
+          />
+        ));
       })()}
     </div>
   )

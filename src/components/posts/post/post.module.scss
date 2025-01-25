@@ -1,15 +1,38 @@
+@use '/src/shared/styles/colors.scss' as *;
+
 .wrapper {
   display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 12px 24px;
+}
+
+.avatar {
+  flex-grow: 0;
+}
+
+.content {
+  flex-grow: 1;
+  margin-left: 1rem;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
 }
 
 .title {
+  font-weight: bold;
+  // display: flex;
+  // justify-content: flex-start;
+}
 
+.dateCreated {
+  margin-left: .5rem;
+  font-weight: normal;
+  color: $text-default;
 }
 
 .desc {
 
-}
-
-.date-created {
-  
 }
